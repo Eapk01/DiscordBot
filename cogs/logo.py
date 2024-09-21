@@ -7,7 +7,7 @@ class Logo(commands.Cog):
 
     @commands.command(name='logo')
     async def send_logo(self, ctx):
-        logo_path = './assets/logo.png'  # Make sure this path is correct
+        logo_path = './assets/logo.png'
         with open(logo_path, 'rb') as f:
             picture = discord.File(f)
             await ctx.send(file=picture)
