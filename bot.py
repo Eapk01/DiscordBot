@@ -14,7 +14,7 @@ async def on_ready():
     for filename in os.listdir('./cogs'):
         if filename.endswith('.py'):
             await bot.load_extension(f'cogs.{filename[:-3]}')
-
+print("Hello")
 BOT_KEY = os.getenv("BOT_KEY")
 bot.run(BOT_KEY)
 
