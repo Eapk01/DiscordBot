@@ -5,6 +5,7 @@ class Quote(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
+    @commands.guild_only()
     @commands.command(name='quote')
     async def quote(self, ctx):
         quotes = [

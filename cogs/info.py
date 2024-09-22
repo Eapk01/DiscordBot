@@ -4,6 +4,7 @@ class Info(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
+    @commands.guild_only()
     @commands.command(name='info')
     async def send_info(self, ctx):
         info_message = """

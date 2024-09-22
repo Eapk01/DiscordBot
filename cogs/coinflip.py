@@ -5,6 +5,7 @@ class CoinFlip(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
+    @commands.guild_only()
     @commands.command(name='coinflip')
     async def coinflip(self, ctx):
         outcome = random.choice(["Heads", "Tails"])

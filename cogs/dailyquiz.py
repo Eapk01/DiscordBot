@@ -8,18 +8,19 @@ class DailyQuiz(commands.Cog):
         self.current_quiz = None
         self.correct_answer = None
         self.quiz_time = None
-        self.channel_id = 1286687012795191350
+        self.channel_id = 1287148847876931696
         self.answered_users = set()
 
     # Post the daily quiz in a public channel
+    @commands.guild_only()
     @commands.command(name='dailyquiz')
     async def post_daily_quiz(self, ctx):
         if self.current_quiz and self.quiz_time == datetime.date.today():
             await ctx.send(f"Today's quiz has already been posted!")
         else:
             # Set today's quiz and correct answer (change this daily)
-            self.current_quiz = "Which Overwatch character famously says, **'Oh, let's break it down!'**?"
-            self.correct_answer = "Lucio"
+            self.current_quiz = """Which Overwatch 2 character says, "I'm the last one you'll ever cross?" """
+            self.correct_answer = "Ashe"
             self.quiz_time = datetime.date.today()
             self.answered_users = set()
 
